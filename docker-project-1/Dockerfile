@@ -11,7 +11,7 @@ RUN      git clone   https://github.com/Lion-Technology-Solutions/liontech-onlin
 
 #maven
 
-FROM   maven:3-amazoncorretto-21-al2023 as build 
+FROM   maven:3.5-jdk-8-alpine as build 
 WORKDIR /app 
 COPY  --from=repo /app/liontech-online-library-web-app   /app/
 RUN mvn test 
