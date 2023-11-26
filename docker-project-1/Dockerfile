@@ -16,4 +16,5 @@ WORKDIR /app
 COPY  --from=repo /app/liontech-online-library-web-app   /app/
 RUN mvn test 
 RUN mvn install 
+RUN mvn validate
 RUN  mvn clean package 
