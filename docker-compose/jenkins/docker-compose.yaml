@@ -1,0 +1,8 @@
+version: "2.5"
+services:
+  jenkins:
+     image: liontechacademy/class21-devops:jenkin
+     ports:
+       - "50000:5000"
+       - "8080:8080"
+     init:  true 
