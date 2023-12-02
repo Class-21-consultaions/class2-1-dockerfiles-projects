@@ -1,0 +1,18 @@
+version: "2"
+services:
+  lts:
+    image: liontechacademy/class21-devops:wordpress-v1
+    depends_on:
+     - mysql
+    environment:
+     - WORDPRESS_DB_HOST=mysql:3306
+     - WORDPRESS_DB_USER=root
+     - WORDPRESS_DB_PASSWORD=root 
+     - WORDPRESS_DB_NAME=wordpress
+    ports:
+      - "8089:80"
+  mysql:
+    image: mysql:5.7.44
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+  
